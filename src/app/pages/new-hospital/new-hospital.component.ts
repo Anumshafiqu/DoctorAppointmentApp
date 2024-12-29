@@ -18,7 +18,7 @@ onRegister(){
       if(res.Result){
          alert("resgistrtion Success")
       }else{
-        //  alert(res.message)
+          alert(res.message)
       }
     }, error =>{
       alert(JSON.stringify(error))

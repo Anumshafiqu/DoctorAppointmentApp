@@ -1,1 +1,113 @@
-<p>appointment-list works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <div class="row">
+                <div class="col-5" *ngFor="let item of AppointmentList;">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">{{ item.name }}</h5>
+                        <h5 class="card-title">{{ item.mobileNo }}</h5>
+                        <p class="card-text">{{ item.naration }}</p>
+                        <a href="#" class="btn btn-primary">{{ item.appointmentTime }}</a>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        <div class="col-5">
+            <div class="container mt-4">
+                <div class="card">
+                    <div class="card-header bg-secondary text-white">
+                        <h5>New Appointment</h5>
+                    </div>
+                    <div class="card-body">
+
+                        <!-- Enter Name -->
+                        <div class="form-group mb-3">
+                            <!-- <label for="name">Enter Name</label> -->
+                            <input type="text" id="name" class="form-control" [(ngModel)]="newAppointment.name"
+                                placeholder="Enter Name" />
+                        </div>
+
+                        <!-- Enter Mobile No and City -->
+                        <div class="row form-row mb-3">
+                            <div class="col-6">
+                                <!-- <label for="mobile">Enter Mobile No</label> -->
+                                <input type="text" id="mobile" class="form-control"
+                                    [(ngModel)]="newAppointment.mobileNo" placeholder="Enter Mobile No" />
+                            </div>
+                            <div class="col-6">
+                                <!-- <label for="city">Enter City</label> -->
+                                <input type="text" id="city" class="form-control" [(ngModel)]="newAppointment.city"
+                                    placeholder="Enter City" />
+                            </div>
+                        </div>
+
+                        <!-- Enter Age and First Time -->
+                        <div class="row form-row mb-3">
+                            <div class="col-7">
+                                <!-- <label for="age">Enter Age</label> -->
+                                <input type="number" id="age" class="form-control" [(ngModel)]="newAppointment.age"
+                                    placeholder="Enter Age" />
+                            </div>
+                            <div class="col-5">
+                                <label for="firstTime">Is First Time</label>
+                                <div class="form-check">
+                                    <input type="checkbox" id="firstTime" [(ngModel)]="newAppointment.isFirstVisit"
+                                        class="form-check-input" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Gender Selection -->
+                        <div class="row form-group mb-3">
+
+                            <div class="mx-2"> <label>Gender</label>
+                                <div class="mx-2 form-check form-check-inline">
+                                    <input type="radio" id="male" name="gender" class="form-check-input"
+                                        [(ngModel)]="newAppointment.gender" />
+                                    <label for="male" class="form-check-label">Male</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" id="female" name="gender" class="form-check-input"
+                                        [(ngModel)]="newAppointment.gender" />
+                                    <label for="female" class="form-check-label">Female</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Date and Appointment Time -->
+                        <div class="row form-row mb-3">
+                            <div class="col-6">
+                                <!-- <label for="appointmentDate">Select Date</label> -->
+                                <input type="date" id="appointmentDate" class="form-control"
+                                    [(ngModel)]="newAppointment.appointmentDate" />
+                            </div>
+                            <div class="col-6">
+                                <!-- <label for="appointmentTime">Enter Appointment</label> -->
+                                <input type="text" id="appointmentTime" class="form-control"
+                                    [(ngModel)]="newAppointment.appointmentTime" placeholder="Enter Appointment" />
+                            </div>
+                        </div>
+
+                        <!-- Enter Narration -->
+                        <div class="form-group mb-3">
+                            <label for="narration">Enter Narration</label>
+                            <textarea id="narration" class="form-control" [(ngModel)]="newAppointment.naration" rows="3"
+                                placeholder="Enter Narration"></textarea>
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="d-flex justify-content-end">
+                            <button type="reset" class="btn btn-secondary me-2">Reset</button>
+                            <button type="submit" class="btn btn-primary" (click)="bookAppointment()">Book
+                                Appointment</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>

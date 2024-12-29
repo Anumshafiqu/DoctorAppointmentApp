@@ -9,7 +9,9 @@ import { HospitalService } from './core/service/hospital.service';
 })
 export class AppComponent {
   userObj : User = new User();
+
   LoggedStorageData :Hospital = new Hospital();
+
   private hospitalService = inject(HospitalService)
   constructor(){
     const loggedData = localStorage.getItem('PractoLogin');
@@ -32,11 +34,11 @@ export class AppComponent {
   onLogin(){
     this.hospitalService.login(this.userObj).subscribe((res:Apiresponse)=>{
       if(res.Result){
-        this.LoggedStorageData = res.Data;
-        localStorage.setItem('PractoLoin',JSON.stringify(res.Data))
+        this.LoggedStorageData = res.data;
+        localStorage.setItem('PractoLogin',JSON.stringify(res.data))
         this.CloseLogin();
       }else{
-        alert(res.message)
+         alert(res.message);
       }
     })
   }
