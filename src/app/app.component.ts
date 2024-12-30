@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { Apiresponse, Hospital, User } from './core/classes/hospitalModel';
 import { HospitalService } from './core/service/hospital.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,7 @@ export class AppComponent {
   LoggedStorageData :Hospital = new Hospital();
 
   private hospitalService = inject(HospitalService)
-  constructor(){
+  constructor(private router:Router){
     const loggedData = localStorage.getItem('PractoLogin');
     if(loggedData !=null){
       this.LoggedStorageData = JSON.parse(loggedData);
@@ -45,6 +46,7 @@ export class AppComponent {
   logoff() {
     localStorage.removeItem('PractoLogin');
     this.LoggedStorageData = new Hospital();
+    this.router.navigateByUrl('home')
 
   }
 }

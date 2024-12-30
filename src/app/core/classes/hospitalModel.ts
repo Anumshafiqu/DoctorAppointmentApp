@@ -48,6 +48,7 @@ export class Appointmnet {
     isFirstVisit: boolean;
     naration: string;
     hospitalId: number;
+    hospitalName:string;
     constructor(){
         this.name = '';
         this.age = 0;
@@ -59,5 +60,6 @@ export class Appointmnet {
         this.naration='';
         this.hospitalId = 0;
         this.mobileNo= '';
+        this.hospitalName = '';
     }
 }
