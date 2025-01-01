@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { HospitalService } from '../../core/service/hospital.service';
 
 @Component({
   selector: 'app-dashboard',

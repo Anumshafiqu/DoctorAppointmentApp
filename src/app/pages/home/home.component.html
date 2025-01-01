@@ -1,21 +1,58 @@
-
 <section class="h-50">
-    <div class="container py-2">
-      <div class="row d-flex justify-content-center align-items-center">
-        <div class="col">
-          <div class="card card-registration my-4">
-            <div class="row g-0">
-              <div class="col-xl-6 d-none d-xl-block">
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img4.webp"
-                  alt="Sample photo" class="img-fluid"
-                  style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;" />
-              </div>
-              <div class="col-xl-6">
-                <app-new-hospital></app-new-hospital>
-              </div>
+  <div class="container py-2">
+    <div class="row d-flex">
+      <div class="col">
+        <div class="card card-registration my-4 shadow-sm border-0">
+          <div class="row g-0">
+
+            <div class="col-xl-8">
+              <app-new-hospital></app-new-hospital>
+            </div>
+            <div class="col-xl-4 d-none d-xl-block mt-5">
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img4.webp"
+                alt="Sample photo" class="img-fluid"
+                style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;" />
+
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
+    <!-- <div class="row">
+        <div class="col-lg-8 m-5">
+          <app-dashboard></app-dashboard>
+        </div>
+      </div> -->
+  </div>
+</section>
+
+
+<!-- <div class="card mt-5">
+    <h3 class="text-center">Registered Hospitals</h3>
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+          <tr>
+            <th>Hospital Name</th>
+            <th>Contact No</th>
+            <th>Owner Name</th>
+            <th>Owner Contact No</th>
+            <th>Email</th>
+            <th>City</th>
+            <th>Address</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let hospital of hospitalList">
+            <td>{{ hospital.hospitalName }}</td>
+            <td>{{ hospital.hospitalContactNo }}</td>
+            <td>{{ hospital.hospitalOwnerName }}</td>
+            <td>{{ hospital.hospitalOwnerContactNo }}</td>
+            <td>{{ hospital.hospitalEmailId }}</td>
+            <td>{{ hospital.hospitalCity }}</td>
+            <td>{{ hospital.hospitalAddress }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div> -->

@@ -130,7 +130,6 @@
                                 <p><strong>City:</strong> {{ newAppointment.city }}</p>
                                 <p><strong>Age:</strong> {{ newAppointment.age }}</p>
                                 <p><strong>First Time:</strong> {{ newAppointment.isFirstVisit ? 'Yes' : 'No' }}</p>
-                                <!-- <p><strong>Gender:</strong> {{ newAppointment.gender }}</p> -->
                                 <p><strong>Appointment Date:</strong> {{ newAppointment.appointmentDate | date }}</p>
                                 <p><strong>Appointment Time:</strong> {{ newAppointment.appointmentTime }}</p>
                                 <p><strong>Narration:</strong> {{ newAppointment.naration }}</p>
@@ -179,20 +178,6 @@
                             </div>
                         </div>
 
-                        <!-- <div class="row form-group mb-3">
-                            <div class="mx-2"> <label>Gender</label>
-                                <div class="mx-2 form-check form-check-inline">
-                                    <input type="radio" id="male" name="gender" class="form-check-input"
-                                        [(ngModel)]="newAppointment.gender" />
-                                    <label for="male" class="form-check-label">Male</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input type="radio" id="female" name="gender" class="form-check-input"
-                                        [(ngModel)]="newAppointment.gender" />
-                                    <label for="female" class="form-check-label">Female</label>
-                                </div>
-                            </div>
-                        </div> -->
 
                         <div class="row form-row mb-3">
                             <div class="col-6">
